@@ -4,8 +4,7 @@ from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_community.vectorstores import Chroma
 from langchain_huggingface import HuggingFaceEmbeddings
 
-BASE_DB_DIR = "chroma_db"
-
+BASE_DB_DIR = "/tmp/chroma_db"
 
 def get_embeddings():
 

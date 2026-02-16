@@ -3,13 +3,14 @@ from dotenv import load_dotenv
 
 from langchain_groq import ChatGroq
 from langchain.chains import RetrievalQA
+import streamlit as st
 
 load_dotenv()
 
 def create_chain(vectorstore):
 
     llm = ChatGroq(
-        groq_api_key=os.getenv("GROQ_API_KEY"),
+        groq_api_key=st.secrets("GROQ_API_KEY"),
         model_name="llama-3.1-8b-instant",
         temperature=0.1,
         streaming=True   # IMPORTANT

@@ -9,11 +9,11 @@ langchain-huggingface==0.0.3
 
 chromadb==0.5.5
 
-sentence-transformers==2.7.0
-transformers==4.41.2
-torch==2.2.2
+sentence-transformers==3.0.1
+transformers==4.44.2
+torch==2.6.0
 
 pypdf
 python-dotenv
 
-pysqlite3-binary; platform_system != "Windows"
+pysqlite3-binary

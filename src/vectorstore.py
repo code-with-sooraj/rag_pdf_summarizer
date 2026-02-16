@@ -1,23 +1,20 @@
 import os
 import shutil
+
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_community.vectorstores import Chroma
 from langchain_huggingface import HuggingFaceEmbeddings
 
-BASE_DB_DIR = "/tmp/chroma_db"
+BASE_DB_DIR = "chroma_db"
+
 
 def get_embeddings():
 
     return HuggingFaceEmbeddings(
         model_name="sentence-transformers/all-MiniLM-L6-v2",
-        model_kwargs={
-            "device": "cpu"
-        },
-        encode_kwargs={
-            "normalize_embeddings": True
-        }
+        model_kwargs={"device": "cpu"},
+        encode_kwargs={"normalize_embeddings": True}
     )
-
 
 
 def get_doc_db_path(doc_name):
